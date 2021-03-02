@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Company 360.in</title>
+    <style>
+        select {
+            width: 190px;
+            height: 22px;
+            padding: 1px 2px;
+            border: none;
+            font-size: 16px;
+            color: grey;
+        }
+
+        .input {
+            border: none;
+            border-bottom: 1px;
+            background: none;
+            outline: none;
+            height: 40px;
+            font-size: 16px;
+            border-bottom-style: solid;
+        }
+
+        .gapss {
+            column-count: 2;
+            column-gap: 15px;
+        }
+
+        .button {
+            padding: 10px 30px;
+            font-size: 16px;
+            background-color: yellow;
+        }
+
+
+        @media screen and (max-width: 600px) {
+
+                table tr {
+                    margin-bottom: 10px;
+                    display: block;
+                    padding: 0px;
+                    float:left;
+                }
+
+                table td {
+                    display: block;
+                    font-size: 16px;
+                    float:left;
+                    padding: 10px;
+                    width: 100;
+
+                    
+                }
+                last{
+                    font-size:20px;
+                }
+
+        }
+    </style>
+    <script type="text/javascript">
+        function myfunction() {
+            var email = document.getElementById("emails").value;
+            var phone = document.getElementById("telephone").value;
+            var citi = document.getElementById("city").value;
+            var languages = document.getElementById("lang").value;
+            alert("Email Adress : " + email + "\n" + "Mobile Number : " + phone + "\n" + "City : " + citi + "\n" + "Language : " + languages);
+        }
+    </script>
+</head>
+<body>
+    <center>
+
+        <table cellspacing="30">
+            <tr>
+                <td data-label="emails"><input class="input" type="email" placeholder="Email*" id="emails" required/></td>
+                
+                <td data-label="telephone"><input class="input" type="tel" placeholder="Mobile Number*" maxlength="10" id="telephone" required /></td>
+            </tr>
+            <tr>
+                <td data-label="city" class="input">
+                    <select name="city" id="city" required>
+                        <option value="" selected>Select City*</option>
+                        <option value="Mumbai">Mumbai </option>
+                        <option value="Kolkata">Kolkata </option>
+                        <option value="Hyderabad">Hyderabad </option>
+                        <option value="Delhi">Delhi </option>
+                        <option value="Chennai">Chennai </option>
+                        <option value="Bangalore">Bangalore </option>
+                        <option value="Pune">Pune </option>
+                    </select>
+                </td>
+                <td data-label="lang" class="input">
+                    <select name="language" id="lang" required>
+                        <option value="" selected> Select Language* </option>
+                        <option value="Hindi">Hindi </option>
+                        <option value="Marathi">Marathi </option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Urdu">Urdu </option>
+                        <option value="Tamil">Tamil </option>
+                        <option value="Malayalam">Malayalam </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Add to Cart " id="addcart" class="button" onclick="myfunction()">
+        <br />
+
+        <p class="last" style="font-size: 23px">Need to Speak to an Expert? <b>Get Free Consultation</b></p>
+    </center>
+</body >
+</html >
